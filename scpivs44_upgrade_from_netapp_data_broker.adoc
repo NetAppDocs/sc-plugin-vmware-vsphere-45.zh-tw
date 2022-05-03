@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_upgrade_from_netapp_data_broker.html 
+keywords:  
+summary: 如果您想要使用SnapCenter VMware vSphere的更新功能、則必須從NetApp Data Broker 1.1.x升級SnapCenter 至VMware vSphere的VMware Plug-in。 
+---
+= 從NetApp Data Broker升級
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您想要使用SnapCenter VMware vSphere的更新功能、則必須從NetApp Data Broker 1.1.x升級SnapCenter 至VMware vSphere的VMware Plug-in。
+
+.開始之前
+* 您要升級的VM必須有12GB的可用RAM。
+* 您要升級的VM必須開機。
+* 最佳實務做法是在升級之前備份內含NetApp Data Broker的VM。
+
+
+有三個基本升級步驟：
+
+. 準備升級。
+. 下載升級.'ISO'檔案。
+. 安裝升級。
++
+.. 將.'iso'檔案上傳至資料存放區。
+.. 將VM連接到資料存放區中的.'ISO'檔案。
+.. 執行升級。
+
+
+
+
+.步驟
+. 停用SnapCenter VMware vSphere的VMware vCenter外掛程式、做好升級準備。
++
+.. 登入NetApp Data Broker管理GUI。
++
+當您部署NetApp Data Broker時、會顯示IP。
+
+.. 按一下左側導覽窗格中的「組態」、然後按一下「*外掛程式詳細資料*」區段中的「服務」選項、即可停用外掛程式。
+
+
+. 下載升級.'ISO'檔案。
++
+.. 登入NetApp支援網站（ https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]）。
+.. 從產品清單中、選取* SnapCenter 《VMware vSpher**適用的*》「VMware Plug-In」、然後按一下*「下載最新版本*」按鈕。
+.. 下載SnapCenter VMware vSphere的《支援VMware vSphere升級的支援程序》.'ISO'檔案至任何位置。
+
+
+. 安裝升級。
++
+.. 在瀏覽器中、瀏覽至VMware vSphere vCenter。
+.. 在vCenter GUI上、按一下* vSphere Web Client（HTML5）*。
+.. 登入「* VMware vCenter單一登入*」頁面。
+.. 在導覽器窗格中、按一下您要升級的NetApp Data Broker VM、然後按一下* Summary（摘要）*索引標籤。
+.. 在*相關物件*窗格中、按一下清單中的任何資料存放區、然後按一下*摘要*索引標籤。
+.. 在所選資料存放區的* Files（檔案）*索引標籤上、按一下清單中的任何資料夾、然後按一下儲存圖示（*將檔案上傳至資料存放區*）。
+.. 在升級快顯畫面上、瀏覽至您下載「.ISO」檔案的位置、然後按一下「.ISO」檔案映像、再按一下「* Open*」。
++
+檔案會上傳至資料存放區。
+
+.. 瀏覽回您要升級的NetApp Data Broker VM、然後按一下* Summary（摘要）*索引標籤。
++
+在「* VM Hardware *」（* VM硬體*）窗格的「CD / DVD」欄位中、此值應為「Disconnected」（中斷連線）。
+
+.. 按一下「CD/DVD」欄位中的連線圖示、然後選取「*連線至資料存放區*上的CD/DVD映像」。
++
+image:scpivs44_image32.png["錯誤：缺少圖形影像"]
+
+.. 在精靈中、執行下列動作：
++
+在「資料存放區」欄中、選取上傳.'ISO'檔案的資料存放區。
+
++
+在「目錄」欄中、瀏覽至您上傳的「.ISO」檔案、確定「檔案類型」欄位中已選取「ISO映像」、然後按一下「*確定*」。
+
++
+等待欄位顯示「Connected（已連線）」狀態。
+
+.. 存取虛擬應用裝置的* Summary（摘要）*索引標籤、然後按一下開始圖示以啟動維護主控台、即可登入維護主控台。
+.. 輸入「系統組態」* 2 *、然後輸入「* 8 *」進行升級。
+.. 輸入* y*繼續並開始升級。
+
+
+
+
+系統顯示「升級成功」訊息後、系統會嘗試啟動服務。
+
+. 等待顯示「Press Enter to Continue（按Enter繼續）」訊息、然後登入SnapCenter VMware vSphere管理GUI的「VMware Plug-in」。
++
+IP位址與先前的NetApp Data Broker位址相同。
+
+. 在「*外掛程式詳細資料*」區段中、啟用SnapCenter VMware vSphere服務的「VMware vSphere外掛程式」、並確定「狀態」顯示為「已連線」。
+
+
+如果您使用SnapCenter VMware vSphere的VMware vSphere支援以應用程式為基礎的資料保護、而且外掛程式無法與SnapCenter the VMware Server通訊、請重新整理與SnapCenter 該伺服器的連線：SnapCenter 在the Sfor the Sfor the Sfor the VMware GUI上、按一下「* hosts*」、然後選取VMware主機、再按一下「*推送伺服器認證資料*」。

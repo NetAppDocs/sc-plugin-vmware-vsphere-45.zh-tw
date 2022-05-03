@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate_snapcenter_backup_metadata_to_the_virtual_appliance.html 
+keywords:  
+summary: 您可以使用SnapCenter Windows PowerShell Cmdlet將SnapCenter 以虛擬機器為一致的備份中繼資料和SnapCenter 以應用程式為一致的方式、將虛擬化資料備份中繼資料移轉至SnapCenter VMware vSphere虛擬應用程式的支援中心外掛程式。 
+---
+= 移轉Windows架SnapCenter 構的VMware備份中繼資料
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapCenter Windows PowerShell Cmdlet將SnapCenter 以虛擬機器為一致的備份中繼資料和SnapCenter 以應用程式為一致的方式、將虛擬化資料備份中繼資料移轉至SnapCenter VMware vSphere虛擬應用程式的支援中心外掛程式。
+
+.步驟
+. 備份MySQL資料庫、然後將該備份複製並移至其他位置、以確保不會因為保留原則而刪除該備份。
++
+link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["備份SnapCenter VMware vSphere MySQL資料庫的VMware vCenter外掛程式"]
+
+. 登入VMware vSphere Web用戶端、確認沒有工作正在執行。
+. 使用「管理員使用者名稱」登入SnapCenter 到「圖形化GUI SnapCenter 」。
++
+請勿使用任何其他使用者名稱登入、即使該使用者名稱具有所有權限、否則可能會導致移轉錯誤。
+
+. 在Windows SnapCenter 還原GUI左導覽窗格中、按一下*設定*、然後按一下*認證*索引標籤、再按一下*新增*以新增虛擬應用裝置的認證。
+. 建立要在「Invoke - SCVOVAMigration」Cmdlet中使用的Run as認證名稱。
++
+
+NOTE: 您必須在「驗證」欄位中選取「Linux」。
+
++
+此步驟新增SnapCenter 了在移轉期間、用來存取虛擬應用裝置的驗證資料。
+
+. 開啟Windows PowerShell視窗並執行下列Cmdlet：
++
+「Open-SmConnection」
+
++
+「Invoke（叫用）SCVOVAMigration（叫用）-SourceSCVHost（舊型選擇控制器主機IP）- DestinationSCVOVAHost（新裝置IP）-OVACredential（設備認證）-ByPassValidationCheck（覆寫）- ContinuedMigration OnStorage錯誤-排程偏移時間<時間」
+
++
+如需移轉工作流程的總覽、請參閱 link:scpivs44_migration_overview.html#migration_workflow["移轉工作流程"]
+
+
+
+
+IMPORTANT: 選用的「覆寫」參數可加快大型環境的移轉速度。此參數會覆寫SnapCenter VMware vSphere主機的VMware vCenter的VMware vSphere主機之VMware Infrastructure外掛程式上MySQL資料庫中的資料。請勿多次使用「覆寫」參數。如果您的移轉是部分移轉、再次使用「覆寫」參數可能會覆寫現有的移轉資料。如果您在不使用「覆寫」參數的情況下多次執行「Invoke（叫用）SCVOVAMigration（叫用）」、先前移轉的資料將會複製。
+
+
+NOTE: 如果來源SnapCenter VMware主機和目的地SnapCenter VMware虛擬應用裝置主機位於不同的時區、請使用「排程時間偏移時間」參數。此值可以是正或負時間偏移、以調整排程的備份執行時間。以hh：mm:sss格式指定時間差異；例如、06:00:00或-06:00:00表示負值。

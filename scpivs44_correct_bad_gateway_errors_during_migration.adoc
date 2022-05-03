@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_correct_bad_gateway_errors_during_migration.html 
+keywords:  
+summary: 當您手動將檔案或其他內容新增SnapCenter 至VMware vSphere的VMware vCenter外掛程式、然後進行移轉時、可能會遇到「不良閘道」錯誤。 
+---
+= 修正移轉期間的「不良閘道」錯誤
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可能會遇到「不良閘道」錯誤的原因有好幾個。
+
+
+
+=== 案例1
+
+您可以手動將檔案或其他內容新增至SnapCenter VMware vSphere的VMware vCenter更新外掛程式、然後嘗試進行移轉。在此案例中、應用裝置空間不足、無法進行移轉程序。
+
+若要修正此錯誤、請移除任何手動新增的檔案。
+
+
+
+=== 案例2
+
+VMware vSphere的VMware vSphere連線功能已停止、或是移轉期間服務已停止。SnapCenter
+
+VMware vSphere的VMware vSphere連接狀態的VMware vCenter外掛程式必須在移轉程序期間「連線」SnapCenter 。您也可以在虛擬應用裝置中手動更新逾時組態。

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_prerequisites_for_migration.html 
+keywords:  
+summary: 移轉至SnapCenter VMware vSphere的VMware vSphere的VMware外掛程式之前、請先確認所有先決條件均已完成。 
+---
+= 移轉的必要條件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+移轉至SnapCenter VMware vSphere的VMware vSphere的VMware外掛程式之前、請先確認所有先決條件均已完成。
+
+* 您必須執行SnapCenter 的是不含更新版本的伺服器。
+* 您必須使用管理認證。
+* VMware vSphere虛擬應用裝置的VMware vCenter外掛程式必須在啟用VMware外掛程式的情況下部署、並在vCenter上註冊。SnapCenter SnapCenter
+* 在VMware vCenter外掛程式儀表板上、VMware vSphere的VMware vSphere的VMware外掛程式狀態必須為「Connected（已連線）」SnapCenter SnapCenter 。
+* 您必須使用部署SnapCenter VMware外掛程式時所指定的帳戶、建立Linux類型的Run as認證。
+* 必須刪除所有來賓檔案還原工作階段。
+* 必須使用IP位址設定、而非完整網域名稱（FQDN）SnapCenter 。
++
+在連結模式環境中、您必須將所有連結的節點移轉到一起。
+
+* 儲存虛SnapCenter 擬機器的名稱必須解析為管理生命期。如果您將「ETC」主機項目新增至「支援虛擬機器名稱」、則必須確認這些項目也可從虛擬應用裝置解析。
+

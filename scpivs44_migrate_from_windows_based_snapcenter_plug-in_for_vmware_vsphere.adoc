@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate_from_windows_based_snapcenter_plug-in_for_vmware_vsphere.html 
+keywords:  
+summary: 如果您使用的SnapCenter 是Windows型的VMware vCenter外掛程式、而且想要使用SnapCenter VMware vSphere虛擬應用裝置的VMware vCenter外掛程式所提供的功能、則必須部署虛擬應用裝置並移轉備份中繼資料。 
+---
+= 從SnapCenter VMware vSphere的Windows型效能更新外掛程式移轉
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您使用的SnapCenter 是Windows型的VMware vCenter外掛程式、而且想要使用SnapCenter VMware vSphere虛擬應用裝置的VMware vCenter外掛程式所提供的功能、則必須部署虛擬應用裝置並移轉備份中繼資料。
+
+.開始之前
+* 您的虛擬化資料庫和檔案系統備份必須與SnapCenter 還原整合。
+* 如果SnapCenter 該伺服器是VM、則最好在升級之前先擷取VMware型快照。
+* 請確定SnapCenter 已升級Sure伺服器。請參閱 link:scpivs44_release_notes.html["VMware vSphere的版次說明SnapCenter"^] 以取得支援的升級途徑資訊。
+
+
+有四個基本步驟：
+
+. 下載SnapCenter VMware vSphere的《VMware vSphere》（.ova）外掛程式檔案。
+. 暫停Windows SnapCenter 架構的VMware vCenter外掛程式備份工作。
+. 部署SnapCenter 適用於VMware vSphere OVA的VMware vCenter外掛程式。
+. 移轉Windows型VMware備份中繼資料。
+
+
+.步驟
+. 下載SnapCenter VMware vSphere的《VMware vSphere》（.ova）外掛程式檔案。
++
+.. 登入NetApp支援網站 (https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]）。
+.. 從產品清單中、選取* SnapCenter 《VMware vSpher**適用的*》「VMware Plug-In」、然後按一下*「下載最新版本*」按鈕。
+.. 將「.ova」檔案下載到任何VM。
+
+
+. 暫停備份工作。
++
+請確定VMware SnapCenter vSphere的Windows型VMware vSphere支援的VMware vCenter外掛程式中沒有執行備份工作。
+
+. 部署SnapCenter 適用於VMware vSphere OVA的VMware vCenter外掛程式。
++
+由於這是全新安裝的Linux SnapCenter 版VMware vCenter外掛程式、請依照步驟部署OVA。
+
++
+link:scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"]
+
++
+link:scpivs44_post_deployment_required_operations_and_issues.html["部署後所需的作業與問題"]
+
+. 移轉Windows型VMware備份中繼資料。
++
+link:scpivs44_migrate_from_snapcenter_backup_metadata_to_the_virtual_appliance.html["移轉Windows架SnapCenter 構的VMware備份中繼資料"]
+
+

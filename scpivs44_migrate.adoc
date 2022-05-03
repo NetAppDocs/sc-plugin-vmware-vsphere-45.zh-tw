@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate.html 
+keywords:  
+summary: 您可以使用SnapCenter Windows PowerShell Cmdlet、將SnapCenter VMware vSphere中繼資料的VMware vSphere支援功能之用的VMware vSphere中繼資料、從Windows型SnapCenter 的支援服務器移轉至SnapCenter 適用於VMware vSphere虛擬應用裝置的Linux型支援功能外掛程式。 
+---
+= 移轉選項和支援的路徑
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapCenter Windows PowerShell Cmdlet、將SnapCenter VMware vSphere中繼資料的VMware vSphere支援功能之用的VMware vSphere中繼資料、從Windows型SnapCenter 的支援服務器移轉至SnapCenter 適用於VMware vSphere虛擬應用裝置的Linux型支援功能外掛程式。
+
+
+
+== 移轉選項
+
+移轉選項有兩種：
+
+* 從SnapCenter 功能升級
++
+您必須從Windows SnapCenter 型的支援環境移轉下列項目的中繼資料：
+
++
+** 當外掛程式作為VMware vSphere的Windows元件執行時、由VMware vSphere的VMware vSphere的VMware vCenter外掛程式執行VM一致的備份SnapCenter 。SnapCenter
+** 以應用程式為SnapCenter 基礎的外掛程式執行虛擬化資料庫或檔案系統時、應用程式一致的資料保護中繼資料、並在SnapCenter 外掛程式作為SnapCenter Windows元件執行時、由VMware vSphere的VMware vSphere支援。
++
+若要移轉、您可以使用Windows SnapCenter 版本資訊功能指令程式「Invoke-SCVOVAMIGRAation」
+
++
+您只能移轉SnapCenter 來自Set4 4.0或更新版本的中繼資料。
+
+
+
+* 從VSC移轉
++
+您可以移轉VSC 6.2.x（SMVI）中繼資料、以用於未與SnapCenter Sync整合的備份工作。
+
++
+若要移轉、您可以使用NetApp工具箱：NetApp Import Utility for SnapCenter the VMware和Virtual Storage Console。請務必選取VSC to SnapCenter Sure移轉選項。
+
++
+您只能移轉現有備份的中繼資料。例如、如果您沒有現有的備份、則無法只移轉原則。
+
+
+
+
+
+== 支援的移轉路徑
+
+請參閱 link:scpivs44_release_notes.html["VMware vSphere的版次說明SnapCenter"^] 以取得支援的升級與移轉路徑資訊。

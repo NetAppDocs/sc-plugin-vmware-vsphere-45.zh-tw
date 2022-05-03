@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_post-migration.html 
+keywords:  
+summary: 將備份中繼資料移轉至SnapCenter VMware vSphere的VMware vSphere的VMware Plug-in之後、可能會遇到的問題。 
+---
+= 移轉後
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將備份中繼資料移轉至SnapCenter VMware vSphere的VMware vSphere的VMware Plug-in之後、可能會遇到的問題。
+
+* 移轉記錄套裝組合
++
+從SnapCenter 「安裝資料夾」的「App_Data/Migration記錄」目錄下載移轉記錄套件組合。請保留移轉記錄套裝組合、直到確定移轉成功為止。
+
+* 儀表板上的工作詳細資料
++
+移轉備份的相關資訊會列在VMware vSphere Web用戶端的「Recent jobs（最近工作）」窗格中、但在移轉後執行備份之前、詳細資訊不會顯示在儀表板中。
+
+* 驗證錯誤
++
+如果您不使用管理認證、可能會遇到驗證錯誤。
+
++
+link:scpivs44_manage_authentication_errors.html["管理驗證錯誤"]
+
+* 備份名稱
++
+移轉前的備份名稱格式為「RGName」、「主機名稱」、「時間戳記」。例如：「-NAs_DS_RG_perf1server_07-05-20202020_02.11.59.9338」。
+
++
+移轉後的備份名稱格式為「RGName_Timestamp'」。
+
++
+例如、「-NAs_VM_RG-07-202019」_21.20.00.0609'。
+
+* 指令碼前與後置
++
+為資源群組設定的指令碼不會移轉。由於為Windows系統撰寫的指令碼可能無法在Linux型虛擬應用裝置上執行、因此您可能需要重新建立所有或部分指令碼、並在移轉後新增這些指令碼。例如、Windows中的檔案路徑不存在於Linux中、而對「.bat」批次檔的叫用在Linux中則無法運作。
+
++
+其中一種解決方案是將現有的Windows指令碼放在Linux型虛擬應用裝置上、然後測試指令碼是否能正常運作、而不會有任何變更。如果無法正常運作、請在指令碼中以對應的Linux相容命令取代每個Windows型命令。
+
+* 來賓檔案還原認證
++
+來賓檔案還原認證不會移轉。因此、您必須在移轉之後建立新的來賓檔案認證。
+
+* "CBR.overroverr"組態檔
++
+如果您已在「shCBR.override」組態檔中自訂設定、則必須將該檔案移至SnapCenter VMware插件虛擬應用裝置、然後重新啟動Web用戶端服務。
+
+* 升級SnapCenter 以應用程式為基礎的外掛程式
++
+如果您使用SnapCenter VMware支援其他SnapCenter 的VMware外掛程式、則必須將這些外掛程式更新為4.2或更新版本。
+
+* 解除安裝SnapCenter 伺服器
++
+如果SnapCenter 您只使用支援VM或損毀一致的資料保護功能、則在所有VM備份移轉至SnapCenter VMware插件後、即可在SnapCenter Windows主機上解除安裝VMware vCenter Server
+
+
