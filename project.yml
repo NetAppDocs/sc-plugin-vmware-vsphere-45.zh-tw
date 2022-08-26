@@ -16,7 +16,7 @@ settings:
   - name: VMware vSphere的插件SnapCenter
     url: "/sc-plugin-vmware-vsphere-46"
     version-number: '4.6'
-  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr,fr-fr,de-de
 sidebar:
   entries:
   - title: VMware vSphere 4.5文件的適用外掛程式SnapCenter
