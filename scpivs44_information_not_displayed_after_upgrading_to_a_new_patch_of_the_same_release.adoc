@@ -42,7 +42,7 @@ summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版�
 
 
 
-=== 如果您在清除快取之前已經升級、請採取因應措施
+== 如果您在清除快取之前已經升級、請採取因應措施
 
 . 登入SnapCenter VMware的VMware插件管理GUI。
 +

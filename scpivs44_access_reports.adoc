@@ -40,7 +40,7 @@ summary: 您可以從儀表板要求一份或多份工作的報告。
 
 
 
-=== 來自VMware vSphere Web Client的報告類型
+== 來自VMware vSphere Web Client的報告類型
 
 VMware vSphere Web Client for SnapCenter VMware提供可自訂的報告選項、可為您提供資料保護工作和外掛程式資源狀態的詳細資料。您只能產生主要保護的報告。
 

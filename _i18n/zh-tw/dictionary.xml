@@ -1948,7 +1948,6 @@
   <block id="7ea045d5f9f1f71a21d66023c045129c" category="paragraph">備份MySQL資料庫會還原至其原始位置。</block>
   <block id="b44102bc60fe04461ce5e9757f7df1a2" category="summary">若要改善作業效率、您可以修改scbr.override組態檔以變更預設值。這些值可控制設定、例如在備份期間建立或刪除的VMware快照數量、或是備份指令碼停止執行之前的時間。</block>
   <block id="420a474f973d749808b1174802b4b4ab" category="paragraph">指定SnapCenter VMware vSphere的VMware vSphere的VMware vCenter插件完成來賓操作所需的時間間隔（秒）（線上磁碟和還原檔案）。總等待時間由「guestFileRestore、online、disk.timeout」和「uestFileRestore、est.est.FIles.file.timeout」來設定。</block>
-  <block id="45836dd55e4a9e4d3f498e62df8c9a46" category="sidebar">VMware vSphere 4.5的插件SnapCenter</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="8b1375f200206162c06fc46aeb476858" category="sidebar">部署選擇控制閥的要求</block>
@@ -1985,4 +1984,6 @@
   <block id="7608e75619cff3eeb4e8bce40481b456" category="sidebar">軟件文檔SnapCenter</block>
   <block id="11d88a82190664755120fc16494310df" category="sidebar">早期版本的選擇控制閥文件</block>
   <block id="74fe1f888648848c4fd5f85ae847a16c" category="sidebar">NetApp知識庫–選擇控制閥</block>
+  <block id="4ed8fea6a44efd457a04aa1bfb2a2d2b" category="sidebar">VMware vSphere 4.5文件的適用外掛程式SnapCenter</block>
+  <block id="3390e3575b3e341afa2b7172ff5b33a7" category="sidebar">VMware vSphere的插件SnapCenter</block>
 </blocks>
