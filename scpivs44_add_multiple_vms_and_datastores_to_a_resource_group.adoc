@@ -16,6 +16,7 @@ summary: 您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群
 [role="lead"]
 您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群組」精靈、將多個VM和資料存放區新增至任何現有的資源群組。
 
+.關於這項工作
 您可以新增SAN和NAS資料存放區、但不能新增VSAN或VVOL資料存放區。
 
 .步驟

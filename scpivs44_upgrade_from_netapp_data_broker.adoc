@@ -22,6 +22,7 @@ summary: 如果您想要使用SnapCenter VMware vSphere的更新功能、則必�
 * 最佳實務做法是在升級之前備份內含NetApp Data Broker的VM。
 
 
+.關於這項工作
 有三個基本升級步驟：
 
 . 準備升級。
@@ -89,6 +90,7 @@ image:scpivs44_image32.png["錯誤：缺少圖形影像"]
 
 
 
+.完成後
 系統顯示「升級成功」訊息後、系統會嘗試啟動服務。
 
 . 等待顯示「Press Enter to Continue（按Enter繼續）」訊息、然後登入SnapCenter VMware vSphere管理GUI的「VMware Plug-in」。

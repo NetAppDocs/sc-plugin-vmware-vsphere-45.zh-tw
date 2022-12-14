@@ -22,6 +22,7 @@ summary: 如果您使用的SnapCenter 是Windows型的VMware vCenter外掛程式
 * 請確定SnapCenter 已升級Sure伺服器。請參閱 link:scpivs44_release_notes.html["VMware vSphere的版次說明SnapCenter"^] 以取得支援的升級途徑資訊。
 
 
+.關於這項工作
 有四個基本步驟：
 
 . 下載SnapCenter VMware vSphere的《VMware vSphere》（.ova）外掛程式檔案。

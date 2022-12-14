@@ -22,6 +22,7 @@ summary: 您需要使用SnapCenter VMware vSphere管理GUI的VMware vCenter外�
 
 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式來修改該時區。
 
+.開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 
 * 部署VMware插件時會顯示IP位址SnapCenter 。
@@ -50,6 +51,7 @@ image:scpivs44_image28.jpg["錯誤：缺少圖形影像"]
 
 您可以修改SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in登入認證。
 
+.開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 
 * 部署VMware插件時會顯示IP位址SnapCenter 。
@@ -78,6 +80,7 @@ image:scpivs44_image28.jpg["錯誤：缺少圖形影像"]
 
 您可以修改SnapCenter 在VMware vSphere的VMware vCenter外掛程式中設定的vCenter登入認證。外掛程式會使用這些設定來存取vCenter。
 
+.開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 
 * 部署VMware插件時會顯示IP位址SnapCenter 。
@@ -106,6 +109,7 @@ image:scpivs44_image30.png["錯誤：缺少圖形影像"]
 
 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。
 
+.開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 
 * 部署VMware插件時會顯示IP位址SnapCenter 。
