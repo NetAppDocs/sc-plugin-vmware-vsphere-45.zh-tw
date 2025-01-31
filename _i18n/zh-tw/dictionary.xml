@@ -64,7 +64,6 @@
   <block id="f809d02c43aa772a2083da0e92f722e2" category="list-text">單擊*確定*確認刪除操作。</block>
   <block id="8dd89a625f95fb62c70506be2c26dc97" category="list-text">按一下左側vSphere功能表列上的重新整理圖示、即可重新整理備份清單。</block>
   <block id="35b654fd14f12a33551c1993b5321fcb" category="summary">VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter 使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。</block>
-  <block id="8c3d0c00ea667e3e0723e5cdc6473a09" category="doc">VMware vSphere文件的VMware外掛程式SnapCenter</block>
   <block id="b6bb7bbf9c57892b88c536fe12569417" category="summary">如果您要升級至同一版本的新修補程式、則必須清除SnapCenter vCenter Web Server上的VMware vSphere快取的VMware vSphere外掛程式、並在升級或登錄之前重新啟動伺服器。</block>
   <block id="1249a334c3011b4680fc228dafe02845" category="doc">升級至SnapCenter 適用於VMware vSphere的同一版本的更新版更新版更新</block>
   <block id="f110cd23dd201ad68954adbde0937a9d" category="paragraph">如果外掛程式快取未清除、則在下列情況下、儀表板和工作監控器不會顯示最近的工作：</block>
@@ -1985,7 +1984,8 @@
   <block id="11d88a82190664755120fc16494310df" category="sidebar">早期版本的選擇控制閥文件</block>
   <block id="74fe1f888648848c4fd5f85ae847a16c" category="sidebar">NetApp知識庫–選擇控制閥</block>
   <block id="4ed8fea6a44efd457a04aa1bfb2a2d2b" category="sidebar">VMware vSphere 4.5文件的適用外掛程式SnapCenter</block>
-  <block id="3390e3575b3e341afa2b7172ff5b33a7" category="sidebar">VMware vSphere的插件SnapCenter</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">範例</block>
+  <block id="4f617a414f082209335de6720dcdf34c" category="sidebar">VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter 使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。本文件庫說明適用於 VMware vSphere 4.4 和 4.5 版的 SnapCenter 外掛程式。</block>
+  <block id="eddfe1d95669579c49fd69f6597aefe5" category="sidebar">適用於 VMware vSphere 4.5 的 SnapCenter 外掛程式文件</block>
 </blocks>
