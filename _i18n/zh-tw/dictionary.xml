@@ -103,8 +103,6 @@
   <block id="898c4d9cd797d45ca2066478fd269974" category="paragraph">當您從VM一致的備份執行客體檔案還原作業時、就會發生此問題。當客體檔案還原工作階段處於作用中狀態時、會針對同一個VM執行另一個VM一致的備份。當來賓檔案還原工作階段中斷連線時、無論是手動或24小時後自動中斷連線、工作階段的備份都不會中斷連線。</block>
   <block id="5857a2699c75798b2ae21bc0b06aff95" category="paragraph">若要修正此問題、請手動將附加於作用中客體檔案還原工作階段的VMDK分離。</block>
   <block id="023f24f55850eacb351f762db9b50e81" category="doc">移轉總覽</block>
-  <block id="8a4139ea0786f41cc68aee2d93ca450a" category="paragraph">移轉命令只會移轉#fes4.0 SnapCenter 及更新版本#的中繼資料。如果您使用SnapCenter 的是舊版的不實功能、則必須先升級、才能進行移轉。</block>
-  <block id="ec3d3431008e42a4c37055a78db7f12e" category="list-text">移轉內容包括</block>
   <block id="2feaeb2408c183d076a33a4219e1d2f9" category="list-text">移轉內容</block>
   <block id="6e47f67257a96da0e60439107f9313d8" category="paragraph">包含儲存系統、自訂節流和電子郵件設定的資訊、可在支援的支援範圍內、於支援組態檔、原則、資源群組、備份中繼資料和掛載中進行。SnapCenter SnapCenter（當移轉遇到預先編寫或後製指令碼時、會失敗）</block>
   <block id="f157845fa7e2cb440b9720fee982320f" category="list-text">未移轉的項目</block>
@@ -114,7 +112,6 @@
   <block id="2f0eb194a8b49da961163bd88957db1d" category="paragraph">"CBR.overroverr"組態檔</block>
   <block id="9f169b49f330730947d222bbed5ea9d5" category="list-text">系統會暫停執行SnapCenter</block>
   <block id="f9e772034bf2ad727413af11c17ae321" category="paragraph">為了確保移轉成功、移轉命令會暫停所有以SnapCenter NetApp註冊的主機。移轉程序成功完成後SnapCenter 、即可繼續執行更新。</block>
-  <block id="076b638a7f6c60dc2af3157c7af35158" category="list-text">移轉Cmdlet程序</block>
   <block id="5791662733ea82fadcf51018f5a713cc" category="paragraph">您必須針對SnapCenter 以SnapCenter VMware登錄的每個VMware外掛程式執行個體、使用Windows PowerShell指令程式「Invoke（叫用）SCVOVAMigration（叫用SCVOVAMigration）」。</block>
   <block id="e58c39b63288d59ff9b1d3a32f24ba44" category="paragraph">Cmdlet會執行下列動作：</block>
   <block id="ddfa006f0c7097e6fe9a320155501b2f" category="list-text">暫停所有排程、以避免移轉期間發生工作故障。成功移轉之後、排程會自動重新啟用。</block>
@@ -124,7 +121,6 @@
   <block id="8ad1e62298fe84f2103d5d68c12376c5" category="paragraph">如果SnapCenter 將VMware vCenter插件安裝在SnapCenter VMware vCenter伺服器主機上、且已針對SnapCenter 該系統資訊庫設定保護功能、則移轉程序也會卸載Windows型外掛套件、其中包含SnapCenter 適用於VMware vSphere的VMware vCenter外掛程式和SnapCenter 適用於Windows的VMware Infrastructure外掛程式、 然後重新安裝SnapCenter 最新版本的Windows版支援儲存庫保護。在VMware GUI中的主機類型SnapCenter 從「vSphere」變更為「Windows」。</block>
   <block id="f45c0c9d4c9330950129ecfca4d67849" category="list-text">從Windows SnapCenter 效能更新伺服器移除vSphere主機和資源群組。</block>
   <block id="63d4733b87f2ebada3ddc1c38c9e2096" category="list-text">在Linux型SnapCenter 的VMware vCenter外掛程式上啟動備份工作。</block>
-  <block id="4da72ab114de409c72a5b91f5ad57eac" category="list-text">登錄vSphere主機以取得SnapCenter VMware的支援功能、以SnapCenter 支援以應用程式為基礎的虛擬化資料庫和檔案系統備份（透過VMDK備份的應用程式）。</block>
   <block id="eb35c37e8caa9a670b1dc9d5b748f81d" category="list-text">中繼資料的儲存位置</block>
   <block id="225482ffbb975fa40a03adf122327c07" category="paragraph">應用程式型VMDK備份的中繼資料儲存在SnapCenter VMware Server儲存庫中。VM和資料存放區備份的中繼資料儲存在SnapCenter VMware的VMware插件MySQL儲存庫中。</block>
   <block id="ebd912e510a4a32d14d678f9f198f7dd" category="summary">如果您使用SnapCenter VMware vSphere的VMware vCenter外掛程式、vCenter Server會提供額外的RBAC層級。外掛程式同時支援vCenter Server RBAC和ONTAP VMware RBAC。</block>
@@ -833,7 +829,6 @@
   <block id="aa5a4d4d3f6ec3df6838d6d8e4cbe41f" category="paragraph">您可以在單一位置維護控制器認證。</block>
   <block id="89321ccbd89a9e660bc76b0f2974632d" category="summary">VMware解決方法外掛程式採用SSL加密技術、可與用戶端瀏覽器進行安全通訊。SnapCenter雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保該憑證對您的環境而言是獨一無二的。</block>
   <block id="9668b00eae1748d51afb7f725a15301a" category="inline-link">知識庫文章：如何建立及/或將SSL憑證匯入SnapCenter VMware vSphere的VMware外掛程式</block>
-  <block id="ba9184cb661fa8aa1f1e6f33c3d4f7b2" category="paragraph">請參閱<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block>。</block>
   <block id="57fecba227d9b5b26c1884494a366340" category="summary">移轉至SnapCenter VMware vSphere的VMware vSphere的VMware外掛程式之前、請先確認所有先決條件均已完成。</block>
   <block id="0b7c6ad598b84c29a50ba48e7f42a74b" category="doc">移轉的必要條件</block>
   <block id="f3942fde5c8781923ba7af8fdb939268" category="list-text">您必須執行SnapCenter 的是不含更新版本的伺服器。</block>
@@ -1540,7 +1535,6 @@
   <block id="5990783a93858d845e12e401808f16f3" category="list-text">當二線儲存設備（鏡射保存庫）上的Snapshot複本數量達到上限時、在備份作業中登錄備份及套用保留的活動將失敗、並顯示下列錯誤：「此Snapshot複本目前被一或多個SnapMirror關係當成參考Snapshot複本使用。刪除Snapshot複本可能導致SnapMirror作業失敗</block>
   <block id="7cb7ec638ee3f628b5dd7b29b735054f" category="paragraph">若要修正此問題、請設定次要儲存設備的SnapMirror保留原則、以避免達到Snapshot複本的上限。</block>
   <block id="585f74b2337dcf50d5f84248087dbc7a" category="inline-link">關於使用角色型存取控制的資訊SnapCenter</block>
-  <block id="339d9a9c6148bb34e3d15a00f296465c" category="paragraph">如需系統管理員如何指派資源給使用者的相關資訊、請參閱<block ref="3c6a9a14d0d13aed475a45101fc3cc00" category="inline-link-rx"></block>。</block>
   <block id="600a5d9204570f4fa6ca6b92c38201a2" category="list-text">如果您想要VM一致的備份、則必須安裝並執行VMware Tools。需要VMware工具來停止虛擬機器。</block>
   <block id="567ee5fafb197286f35c17cbadbca640" category="paragraph">這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。</block>
   <block id="406017c1f63a5ea525013c02ee27c794" category="list-text">在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*原則*。</block>
@@ -1819,7 +1813,6 @@
   <block id="db2e1add63786a85a052ed22230695ba" category="paragraph">由於這是全新安裝的Linux SnapCenter 版VMware vCenter外掛程式、請依照步驟部署OVA。</block>
   <block id="dcf7adf9c4359cc6e6dd9e4730ada614" category="paragraph"><block ref="dcf7adf9c4359cc6e6dd9e4730ada614" category="inline-link-macro-rx"></block></block>
   <block id="8d9c5cc14a4e4caa925cbd7a13131b96" category="paragraph"><block ref="8d9c5cc14a4e4caa925cbd7a13131b96" category="inline-link-macro-rx"></block></block>
-  <block id="5ab39eb962f4ca6c2fa2841599dc4b73" category="paragraph"><block ref="5ab39eb962f4ca6c2fa2841599dc4b73" category="inline-link-macro-rx"></block></block>
   <block id="3cd20156fa10057c7f84a9e13d691b32" category="summary">當您不再需要存取資料存放區中的檔案時、可以卸載備份。</block>
   <block id="625c5f11d91220016d9e8461e75ca4be" category="doc">卸載備份</block>
   <block id="14565730ceff013c6a0b5a7f4befb671" category="paragraph">如果備份在VMware vSphere Web用戶端GUI中列為已掛載、但未列在卸載備份畫面中、則您需要使用REST API「/backup/{backup-ID}/cleanup」來清理未受限的資料存放區、然後再次嘗試卸載程序。</block>
@@ -1980,4 +1973,7 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="4ddfe5345c1893eaed7f3552ae181f2a" category="paragraph">請參閱<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>。</block>
+  <block id="9c6e71898eae8897a7d429e3065e5a68" category="paragraph">有關管理員如何為使用者指派資源的資訊，請參閱<block ref="d818f211a7449f29082596280ad483fa" category="inline-link-rx"></block>。</block>
+  <block id="a621a06ff9228f52f24b83c3da378df2" category="paragraph"><block ref="a621a06ff9228f52f24b83c3da378df2" category="inline-link-macro-rx"></block></block>
 </blocks>
