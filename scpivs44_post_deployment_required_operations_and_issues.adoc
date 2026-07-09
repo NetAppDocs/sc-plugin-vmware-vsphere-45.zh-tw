@@ -23,7 +23,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 * 現有SnapCenter 的需求使用者
 +
-如果您是現有SnapCenter 的使用者、則必須移轉現有SnapCenter 的還原VM和資料存放區備份及中繼資料。如需移轉的相關資訊、請參閱 link:scpivs44_migrate.html#migration-options.html["移轉選項"^]。
+如果您是現有 SnapCenter 用戶，則必須遷移現有的 SnapCenter 虛擬機器和資料儲存備份及元資料。有關遷移的資訊，請參閱 link:scpivs44_migrate.html#migration-options["移轉選項"^]。
 
 
 

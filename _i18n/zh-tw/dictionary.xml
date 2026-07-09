@@ -894,7 +894,6 @@
   <block id="43d19dfc160cd258cf0b07ac5bd3dc44" category="list-text">新SnapCenter 增功能使用者</block>
   <block id="25d5b23dfd2418ca2f7bd81c33cc1638" category="paragraph">如果您是SnapCenter 全新的支援者、則必須先將儲存VM新增SnapCenter 至支援中心、才能執行任何資料保護作業。新增儲存VM時、請指定管理LIF。您也可以新增叢集並指定叢集管理LIF。如需新增儲存設備的相關資訊、請參閱 <block ref="a83c5384e42700c13fcc0778429c0b28" category="inline-link-macro-rx"></block>。</block>
   <block id="c46744bb8e6daa4db071ea447075214c" category="list-text">現有SnapCenter 的需求使用者</block>
-  <block id="66e11d3669530781548c44d0e985fd1f" category="paragraph">如果您是現有SnapCenter 的使用者、則必須移轉現有SnapCenter 的還原VM和資料存放區備份及中繼資料。如需移轉的相關資訊、請參閱 <block ref="fb8941fcb20ab31bfb546ae55256953e" category="inline-link-macro-rx"></block>。</block>
   <block id="40e6eca2154c52c78e678989d72d7903" category="section-title">您可能會遇到的部署問題</block>
   <block id="b4f66c551198bcae0c148df6464649d2" category="list-text">部署虛擬應用裝置之後、儀表板上的*備份工作*索引標籤可能不會在下列情況下載入：</block>
   <block id="01247ceba6ba6adacf0cb970001c3199" category="list-text">您執行的是IPV4、SnapCenter 其中有兩個IP位址可用於VMware vSphere主機。因此、工作要求會傳送到SnapCenter 無法被該伺服器辨識的IP位址。若要避免此問題、請新增您要使用的IP位址、如下所示：</block>
@@ -1976,4 +1975,5 @@
   <block id="4ddfe5345c1893eaed7f3552ae181f2a" category="paragraph">請參閱<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>。</block>
   <block id="9c6e71898eae8897a7d429e3065e5a68" category="paragraph">有關管理員如何為使用者指派資源的資訊，請參閱<block ref="d818f211a7449f29082596280ad483fa" category="inline-link-rx"></block>。</block>
   <block id="a621a06ff9228f52f24b83c3da378df2" category="paragraph"><block ref="a621a06ff9228f52f24b83c3da378df2" category="inline-link-macro-rx"></block></block>
+  <block id="be265de7e1b393ce9975fd92b202571f" category="paragraph">如果您是現有 SnapCenter 用戶，則必須遷移現有的 SnapCenter 虛擬機器和資料儲存備份及元資料。有關遷移的資訊，請參閱 <block ref="78a42a003571fc69eadd314a84045e01" category="inline-link-macro-rx"></block>。</block>
 </blocks>
